@@ -1,0 +1,122 @@
+/* Ensure the particle background is behind everything */
+#gen-js {
+    position: fixed;  /* Stay in one place as background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;       /* Behind other content */
+    background: #000;  /* Fallback background */
+}
+
+/* Make the embedded-doc background transparent so particles can be seen behind it */
+.embedded-doc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: transparent; /* Removed the opaque black */
+    z-index: 2;
+}
+
+.embedded-doc h2 {
+    z-index: 5;
+    font-size: 4rem;
+    font-family: 'Times New Roman', serif;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: inline;
+    margin-bottom: 20px;
+}
+
+/* Use a semi-transparent white background so particles are visible behind it */
+.iframe-container {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    width: calc(50%); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 30px;
+
+    /* Instead of a solid white background, use transparent white (e.g., 90% opacity) */
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.iframe-container iframe {
+    display: block;
+    width: 70vw;
+    height: 80vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    box-sizing: border-box;
+}
+
+
+.embedded-docTL {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: transparent; /* Removed the opaque black */
+    z-index: 2;
+}
+
+.embedded-docTL h2 {
+    z-index: 5;
+    font-size: 4rem;
+    font-family: 'Times New Roman', serif;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: inline;
+    margin-bottom: 20px;
+}
+
+.iframe-containerTL {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    width: calc(90%); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 30px;
+
+    /* Instead of a solid white background, use transparent white (e.g., 90% opacity) */
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.iframe-containerTL iframe {
+    display: block;
+    width: 90vw;
+    height: 80vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    box-sizing: border-box;
+}
+

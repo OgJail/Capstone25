@@ -1,0 +1,349 @@
+html {
+    scroll-behavior: smooth;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #000;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative; /* For layering content over video */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    overflow: hidden; /* Ensures video doesn't overflow the section */
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the section */
+    z-index: -1; /* Sends the video behind content */
+    filter: saturate(0.9); /* Reduces saturation to 50% */
+    /* Optional: Add more filters for effects like brightness or blur */
+    /* Example: filter: saturate(0.5) brightness(0.8); */
+}
+
+.hero-content {
+    z-index: 1; /* Brings content above the video */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.hero-content button {
+    background-color: #00bcd4;
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.hero-content button:hover {
+    background-color: #63c5c8;
+}
+
+/* About Section */
+.about {
+    position: relative;
+    padding: 4rem 2rem;
+    background-color: #63c5c8;
+    text-align: center; /* Center-align content */
+    overflow: hidden;
+    z-index: 2;
+}
+
+.about-heading {
+    background-color: #f9f9f9; /* Light background for the box */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px; /* Soft corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 500px; /* Limit the width of the heading box */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-heading h2 {
+    font-size: 2.5rem;
+    margin: 0; /* Remove default margins */
+    color: #333; /* Add subtle contrast for the text */
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-text, .about-images {
+    background-color: #f9f9f9; /* Light background for the boxes */
+    padding: 2rem;
+    border-radius: 8px; /* Soft corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.about-images img {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px; /* Match the box corner style */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for images */
+}
+
+.about-images img:last-child {
+    margin-bottom: 0; /* Remove margin from the last image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr; /* Stack the columns on smaller screens */
+    }
+
+    .about-text, .about-images {
+        text-align: left;
+    }
+}
+
+/* Features Section */
+.features {
+    position: relative;
+    padding: 4rem 2rem;
+    background-color: #000;
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.features-heading {
+    background-color: #f9f9f9; /* Light background for the box */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px; /* Soft corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Limit the width of the heading box */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center-align the text */
+    position: relative; /* Ensure these elements stay above the particles */
+    /*z-index: 1;  Higher stacking order for content */
+}
+
+.features-heading h2 {
+    font-size: 2.5rem;
+    margin: 0; /* Remove default margins */
+    color: #333; /* Subtle contrast for the text */
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0097a7;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #00bcd4;
+}
+
+/* Responsive Burger Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links.nav-active {
+        display: flex;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+#Aboutparticles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Send the particles canvas to the background */
+    z-index: -1;
+}
+
+#KeyFeaturesparticles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Send the particles canvas to the background */
+    z-index: -1;
+}

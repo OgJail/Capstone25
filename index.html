@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subra Sports - Senior STEM Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/homepageStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JS/homepageJS.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <p><image src="Assets/SSLogoNoBkrnd.png" width="60"></p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Advisors.html">Advisors</a></li>
+                <li><a href="Journals.html">Journals</a></li>
+                <li><a href="Goals.html">Goals</a></li>
+                <li><a href="Timeline.html">Timeline</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <video autoplay muted loop>
+                <source src="Assets/output_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h1>SubraSports.</h1>
+                <p>Welcome to the new generation of sports viewing. Analyze and enjoy them like never before, using the power of AI, computer vision, and code.</p>
+                <button onclick="scrollToSection('features')">Learn More</button>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div id='Aboutparticles-js'></div>
+            <div class="about-heading">
+                <h2>About Subra Sports</h2>
+            </div>
+            <div class="about-container">
+                <!-- Left Column: Text Content -->
+                <div class="about-text">
+                    <p>SubraSportsis the name of this project. The name comes from the tale of Lord Subrahmanya and Ganesha where, because Lord Ganesha had a better understanding of the environment surrounding a game his parents posed, he won over Lord Subrahmanya. If Lord Subrahmanya had better tools to analyze the game, he would’ve won; putting some wordplay onto his name and the idea of Sports (the intended use case for this system), we get SubraSports. The color scheme comes from Lord Subrahmaya's animal, the peacock. This program is an advanced sports analysis tool designed for my Senior STEM Project. This system utilizes computer vision to analyze soccer games and other sports by providing insightful data such as player velocity, ball velocity, and ball trajectories, giving coaches and analysts a new way to understand game dynamics. Beyond that, it also offer a lightweight overlay designed for live streaming to enhance the casual sports viewer experience.
+                    </p>
+                    <p>------------------------------------------------------------------------------------------------------------</p>
+                    <p>This project strives to create an open-source, lightweight, and cheap way for coaches to analyze the game footage of their players. The end product will be a user-friendly program with a dedicated GUI for coaches/broadcasters to input either game or live footage for post-game or live analysis. This technology is targeted for the High School setting where not all school districts have the means to spend a massive amount of money on their sports teams for game analysis/coaching and multiple coaches. This means that there is a large opportunity discrepancy between schools who have funding vs schools who don’t– this project aims to help curb that by providing a free, open source program to expedite the game footage review process. Beyond that, to ensure that short form content with colorful displays don’t ruin game viewing retention, the program offers a visually appealing yet colorful display to entice the younger generation to watch sports. </p>
+                    <p>------------------------------------------------------------------------------------------------------------</p>
+                    <p>Conceptually, this project is inspired by the videogames such as Madden NFL, FIFA, NBA2k and other sports videogames. The idea was to gamify real world sports, similar to how the videogames approach it. The goal was to create similar overlays onto real game footage and provide similar match statistics that these videogames provide, giving coaches deeper insight into their players performance and viewers a more appealing and appeasing watching experience.</p>
+                </div>
+                <!-- Right Column: Image Content -->
+                <div class="about-images">
+                    <p>Example of a Videogame Overlay [FIFA]:</p>
+                    <img src="Assets/GPEX.png" alt="Example of Videogame Overlay [FIFA]"/>
+                    <p>Examples of Heatmap Generation for Coach Analysis:</p>
+                    <img src="Assets/HM1.png" alt="Ball trajectory"/>
+                    <img src="Assets/HM2.png" alt="Ball trajectory"/>
+                    <p>Examples of Ball Tracking across Various Sports:</p>
+                    <img src="Assets/VBBallTrack.png" alt="Ball trajectory">
+                    <img src="Assets/SCBallTrack.png" alt="Ball trajectory">
+                    <img src="Assets/TNBallTrack.png" alt="Ball trajectory">
+                </div>
+            </div>
+        </section>
+        <section id="features" class="features">
+            <div id="KeyFeaturesparticles-js"></div>
+            <div class="features-heading">
+                <h2>Key Features</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Player Velocity Tracking</h3>
+                    <p>Track and analyze player movement and velocity throughout the game. This includes instatenous velocity and total distance ran.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Ball Trajectory Analysis</h3>
+                    <p>Get real-time insights into ball paths, speeds, and other dynamics.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Team Performance Insights</h3>
+                    <p>Analyze overall team performance with advanced metrics such as heatmaps, team ball control %, and live player statisitcs.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Custom Video Outputs</h3>
+                    <p>Receive annotated videos with all computed metrics overlaid for easy review.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Multi-Channel Analysis</h3>
+                    <p>Recieve lightweight video overlays for live steams or computationally heavy video overlays for post-game perforance analysis.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Open-Source</h3>
+                    <p>Code is completely open source and free to use for any project (including the website code!). Please visit my github for source code!</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Multi-Sport Analysis</h3>
+                    <p>Compatible with multiple sports, including soccer, basketball, tennis, and more!</p>
+                </div>
+                <div class="feature-item">
+                    <h3>SOTA (State of the Art) Approach</h3>
+                    <p>The underlying ball tracker uses YOLOV11, a cutting edge computer vision model for object detection!</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Lightweight Functionality</h3>
+                    <p>The code is designed to be as lightweight as possible, allowing for easy integration into other projects. NIVIDA Graphics card is reccommened but not required.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Asthetically Pleasing</h3>
+                    <p>The lightweight overlay is easy on the eyes, great for livestreaming to add a bit of fun to traditional games!</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <!--<p>If you have any questions or would like to learn more about Subra Sports, please reach out.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>!-->
+            <p>If you have any questions, please contact me at JayalDhakal@Gmail.com</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Subra Sports. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jayal-dhakal-4302b1307/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+    <script type = "text/javascript" src="JS/particles.min.js"></script>
+    <script type = "text/javascript" src="JS/aboutSS.js"></script>
+    <script type = "text/javascript" src="JS/KeyFeatures.js"></script>
+</body>
+</html>
